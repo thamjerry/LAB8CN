@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FPT Polytechnic</title>
+</head>
+<style>
+    body{
+    padding: 0px;
+    margin: 0px; 
+ }
+ #container{
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+ }
+ .container>header{
+    background-image:url(img/sinhvien.jpg);
+    background-size: 100% 100%;
+    padding-bottom: 25%;
+    height:0px; 
+}
+.container>nav{
+    background-color:orangered;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    }
+.container>article{
+    width: 40%;
+    min-height: 400px ;
+    background-color:white;
+    float:left;
+    }
+.container>aside{
+    width:25%;
+    min-height: 400px;
+    background-color:white ;
+    float: right;
+ }
+.container>footer{
+     text-align: center;
+     background-color: lightcyan ;
+     line-height: 50px;
+     border-top: 5px duoble orangered ;
+     font-variant: small-caps;
+     clear: both;
+}
+.container>nav>a{
+    color: white;
+    text-decoration: none;
+    margin: 0 ;
+    
+}
+.container>nav>a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+iframe[name=page]{
+    width:100%;
+    min-height: 400px;
+}
+.vmenu{
+    padding:0px;
+    margin:5px;
+    list-style:none;
+    border-radius: 3px;
+    box-shadow: 0 0 2px gray;
+}
+.vmenu a{
+    background: url('img/ball.png') no-repeat 10px center;
+    display: block;
+    border-bottom: 1px dotted orangered;
+    color: orangered;
+    font-variant: small-caps;
+    font-size: larger;
+    text-decoration: none;
+    padding: 8px 5px 8px 30px;
+}
+.vmenu a:hover{
+    background: url('img/arrow.gif') no-repeat 10px center;
+    border-bottom: 1px dotted white;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}
+.col-25{
+    width: 25%;
+    float:left;
+}
+.prod{
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+    margin: 5px;
+    padding:5px;
+    text-align: center;
+    position: relative;
+}
+.prod>.name{
+    font-variant: small-caps;
+    color: orangered ;
+}
+.prod .image{
+    max-width: 98%;
+    height:150px;
+    margin-bottom: 10px;
+}
+.prod>.price{
+    position: absolute;
+    left: 5px;
+    bottom:5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color:orange;
+}
+.prod>.icon{
+    position: absolute;
+    right: 5px;
+    bottom:5px;
+    width:25px;
+}
+.prod>.new-icon{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.top-right{
+    position: absolute;
+    top: 0px;
+    right:0px; 
+    border-bottom-left-radius: 30px;
+    background-color: orangered;
+    box-shadow: 3px 3px 2px gray ;
+    height: 30px;
+    padding: 5px 10px 5px 20px;
+}
+.top-right a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+.top-right a:hover{
+    color: black;
+    text-shadow: 0 0 10px yellow;
+}
+.company-info{
+    position: relative;
+    left: 15px;
+    color: blue;
+    bottom:5px;
+    top: 100px;
+    text-shadow: 0 0 10px orangered;
+    font-variant: small-caps;
+    height: 50px;
+    padding: 15px;
+    margin: 5px;
+}
+.menu>ul>li{
+    display: inline-block;
+}
+.menu>ul>li>a{
+    display: block;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    color: white;
+    padding: 0 10px; 
+    line-height: 40px;
+}
+.menu>ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    background-color: orangered;
+    text-align: center;
+}
+.menu>ul>li>a:hover{
+    color: yellow;
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 0 3px gray;
+}
+.menu ul ul a{
+    display: block;
+    line-height: 30px;
+    color:orangered;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 0 10px; 
+}
+.menu>ul>li:hover>ul{
+    display: block;
+    z-index: 1;
+}
+.menu ul ul a:hover{
+    background-color: orangered;
+    color: white;
+}
+.company-info>h1{
+    color:white;
+    border-bottom: 5px solid rgb(13, 0, 128);
+    width: 300px;
+    padding: 0px;
+    margin: 0px; 
+}
+.company-info>p{
+    color:springgreen;
+    padding: 0px;
+    margin: 0px;
+    position: absolute; 
+}
+.form-group{ 
+    margin: 10px 0px;
+    font-variant: small-caps;
+ }
+ .form-control{
+  width: 98%;
+padding: 5px;
+outline:none;
+border: 1px solid gray;
+border-radius: 3px;
+ }
+ .form-group label{
+font-weight:bold;
+font-variant:small-caps;
+ }
+ .form-control:focus{
+background-color:yellow;
+ box-shadow:0 0 3 px red;
+ border: 1px solid yellow;
+ }
+ .form-button{
+ padding:8px 30px;
+ outline:none;
+ border:none;
+ border-radius:20px;
+ font-weight:bold;
+ background-color:white;
+ color:orangered;
+ box-shadow:inset 0 0 20px blue;
+ }
+ .form-button:hover{
+ color:blue;
+ box-shadow:inset 0 0 20px orangered;
+ }
+ .form-button:disabled{
+ color:darkgray;
+ box-shadow:inset 0 0 20px gray;
+ }
+ .number{
+ background-color:yellow;
+box-shadow:0 0 3pxred;
+border: 1px solid yellow;
+ }
+footer{
+  padding: 25px;
+  background-color: lightpink;
+  text-align: center;
+}
+iframe{
+  width:560; 
+  height:315;
+} 
+</style>
+<body>
+<div class="container">
+    <header>
+        <div class="company-info ">
+           <h1>FPT Polytechnic</h1>
+           <p>Thực học-Thực nghiệp</p>
+        </div>
+         <div class="top-right">
+           <a href="#">Đăng nhập</a>        
+           <a href="#">Đăng kí</a>    
+           <a href="#">Quên mật khẩu</a>   
+         </div>   
+</header>
+<nav class="menu">
+        <ul>
+          <li><a href="trang_chu.html">Trang chủ</a></li>
+          <li><a href="gioi_thieu.html">Giới thiệu</a></li>
+          <li>
+              <a href="#">Liên hệ</a>
+              <ul>
+                  <li><a href="#">Mobile</a></li>
+                  <li><a href="#">Email</a></li>
+              </ul>
+            </li>
+          <li><a href="gop_y.html">Góp ý</a></li>
+          <li><a href="hoi_dap.html">Hỏi đáp</a></li>
+    </ul>
+</nav>
+<article>
+    <form action="#">
+        <lable><b>H</b>ọ và tên:</lable> <br>
+             <input type="text"> <br> 
+        <label><b>G</b>iới tính: 
+             <input type="radio" name="gender"checked/>Nam 
+             <input type="radio" name="gender"/> Nữ  </br>
+        <label><b>H</b>ình ảnh:</label> </br>
+             <input name="photo" type="file"/> </br>
+        <label><b>Q</b>uốc tịch:</label> <br> 
+                <select>
+                    <option>Việt Nam</option>
+                    <option>United States</option>
+                    <option>Trung Quốc</option> 
+                    <option>Nhật Bản</option> 
+                    <option>Singapo</option> 
+                </select> <br>
+        <label>Sở thích:</label><br>
+            <label>
+                <input type="checkbox"> Thể Thao  
+                <input type="checkbox" checked> Du Lịch   
+                <input type="checkbox"> Âm Nhạc   
+                <input type="checkbox"> Ẩm Thực   
+            </label>
+            <div id="textarea">
+                <label><b>G</b>hi chú <br> </label>
+                  <textarea rows="3" cols="30"></textarea>/>
+            </div>
+            <button type="submit">Đăng kí</button>
+            <button type="submit">Nhập lại</button>
+</article>
+<aside> 
+            <ul class="vmenu">
+                <li><a href="#">Máy tính xách tay</a></li>
+                <li><a href="#">Điện thoại di động</a> </li>
+                <li><a href="#">Máy quay phim</a></li>
+                <li><a href="#">Máy chụp ảnh</a></li>
+            </ul>
+</aside>
+    <footer>FPT Polytechnic © 2017. All rights reserved.</footer>
+</div>
+</body>
+</html>

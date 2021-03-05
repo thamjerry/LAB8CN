@@ -1,0 +1,216 @@
+body{
+    padding: 0px;
+    margin: 0px; 
+ }
+ #container{
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+ }
+ .container>header{
+    background-image:url(img/sinhvien.jpg);
+    background-size: 100% 100%;
+    padding-bottom: 25%;
+    height:0px; 
+}
+.container>nav{
+    background-color:orangered;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+    }
+.container>article{
+    width: 75%;
+    min-height: 400px ;
+    background-color:white;
+    float:left;
+    }
+.container>aside{
+    width:25%;
+    min-height: 400px;
+    background-color:white ;
+    float: right;
+ }
+.container>footer{
+     text-align: center;
+     background-color: lightcyan ;
+     line-height: 50px;
+     border-top: 5px duoble orangered ;
+     font-variant: small-caps;
+     clear: both;
+}
+.container>nav>a{
+    color: white;
+    text-decoration: none;
+    margin: 0 ;
+    
+}
+.container>nav>a:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+iframe[name=page]{
+    width:100%;
+    min-height: 400px;
+}
+.vmenu{
+    padding:0px;
+    margin:5px;
+    list-style:none;
+    border-radius: 3px;
+    box-shadow: 0 0 2px gray;
+}
+.vmenu a{
+    background: url('img/ball.png') no-repeat 10px center;
+    display: block;
+    border-bottom: 1px dotted orangered;
+    color: orangered;
+    font-variant: small-caps;
+    font-size: larger;
+    text-decoration: none;
+    padding: 8px 5px 8px 30px;
+}
+.vmenu a:hover{
+    background: url('img/arrow.gif') no-repeat 10px center;
+    border-bottom: 1px dotted white;
+    background-color: orangered;
+    color: white;
+    font-weight: bold;
+}
+.col-25{
+    width: 25%;
+    float:left;
+}
+.prod{
+    border-radius: 10px;
+    box-shadow: 0 0 5px gray;
+    margin: 5px;
+    padding:5px;
+    text-align: center;
+    position: relative;
+}
+.prod>.name{
+    font-variant: small-caps;
+    color: orangered ;
+}
+.prod .image{
+    max-width: 98%;
+    height:150px;
+    margin-bottom: 10px;
+}
+.prod>.price{
+    position: absolute;
+    left: 5px;
+    bottom:5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    color:orange;
+}
+.prod>.icon{
+    position: absolute;
+    right: 5px;
+    bottom:5px;
+    width:25px;
+}
+.prod>.new-icon{
+    position: absolute;
+    top:0px;
+    right:0px;
+}
+.top-right{
+    position: absolute;
+    top: 0px;
+    right:0px; 
+    border-bottom-left-radius: 30px;
+    background-color: orangered;
+    box-shadow: 3px 3px 2px gray ;
+    height: 30px;
+    padding: 5px 10px 5px 20px;
+}
+.top-right a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bolder;
+}
+.top-right a:hover{
+    color: black;
+    text-shadow: 0 0 10px yellow;
+}
+.company-info{
+    position: relative;
+    left: 15px;
+    color: blue;
+    bottom:5px;
+    top: 100px;
+    text-shadow: 0 0 10px orangered;
+    font-variant: small-caps;
+    height: 50px;
+    padding: 15px;
+    margin: 5px;
+}
+.menu>ul>li{
+    display: inline-block;
+}
+.menu>ul>li>a{
+    display: block;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    color: white;
+    padding: 0 10px; 
+    line-height: 40px;
+}
+.menu>ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    background-color: orangered;
+    text-align: center;
+}
+.menu>ul>li>a:hover{
+    color: yellow;
+}
+.menu ul ul{
+    position: absolute;
+    display: none;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    border-radius: 3px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 0 3px gray;
+}
+.menu ul ul a{
+    display: block;
+    line-height: 30px;
+    color:orangered;
+    text-decoration: none;
+    font-variant: small-caps;
+    font-size: larger;
+    padding: 0 10px; 
+}
+.menu>ul>li:hover>ul{
+    display: block;
+    z-index: 1;
+}
+.menu ul ul a:hover{
+    background-color: orangered;
+    color: white;
+}
+.company-info>h1{
+    color:white;
+    border-bottom: 5px solid rgb(13, 0, 128);
+    width: 300px;
+    padding: 0px;
+    margin: 0px; 
+}
+.company-info>p{
+    color:springgreen;
+    padding: 0px;
+    margin: 0px;
+    position: absolute; 
+}

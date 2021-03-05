@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FPT Polytechnic</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #container {
+        max-width: 1000px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .container>header {
+        background-image: url(img/sinhvien.jpg);
+        background-size: 100% 100%;
+        padding-bottom: 25%;
+        height: 0px;
+    }
+
+    .container>nav {
+        background-color: orangered;
+        line-height: 40px;
+        color: white;
+        text-align: center;
+    }
+
+    .container>article {
+        width: 20%;
+        min-height: 400px;
+        background-color: white;
+        float: left;
+    }
+
+    .container>section {
+        width: 30%;
+        min-height: fit-content;
+        float: left;
+    }
+
+    .container>aside {
+        width: 25%;
+        min-height: 400px;
+        background-color: white;
+        float: right;
+    }
+
+    .container>footer {
+        text-align: center;
+        background-color: lightcyan;
+        line-height: 50px;
+        border-top: 5px duoble orangered;
+        font-variant: small-caps;
+        clear: both;
+    }
+
+    .container>nav>a {
+        color: white;
+        text-decoration: none;
+        margin: 0;
+
+    }
+
+    .container>nav>a:hover {
+        color: yellow;
+        text-decoration: underline;
+    }
+
+    iframe[name=page] {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .vmenu {
+        padding: 0px;
+        margin: 5px;
+        list-style: none;
+        border-radius: 3px;
+        box-shadow: 0 0 2px gray;
+    }
+
+    .vmenu a {
+        background: url('img/ball.png') no-repeat 10px center;
+        display: block;
+        border-bottom: 1px dotted orangered;
+        color: orangered;
+        font-variant: small-caps;
+        font-size: larger;
+        text-decoration: none;
+        padding: 8px 5px 8px 30px;
+    }
+
+    .vmenu a:hover {
+        background: url('img/arrow.gif') no-repeat 10px center;
+        border-bottom: 1px dotted white;
+        background-color: orangered;
+        color: white;
+        font-weight: bold;
+    }
+
+    .col-25 {
+        width: 25%;
+        float: left;
+    }
+
+    .prod {
+        border-radius: 10px;
+        box-shadow: 0 0 5px gray;
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+        position: relative;
+    }
+
+    .prod>.name {
+        font-variant: small-caps;
+        color: orangered;
+    }
+
+    .prod .image {
+        max-width: 98%;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .prod>.price {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 25px;
+        color: orange;
+    }
+
+    .prod>.icon {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        width: 25px;
+    }
+
+    .prod>.new-icon {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        border-bottom-left-radius: 30px;
+        background-color: orangered;
+        box-shadow: 3px 3px 2px gray;
+        height: 30px;
+        padding: 5px 10px 5px 20px;
+    }
+
+    .top-right a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        font-variant: small-caps;
+        font-weight: bolder;
+    }
+
+    .top-right a:hover {
+        color: black;
+        text-shadow: 0 0 10px yellow;
+    }
+
+    .company-info {
+        position: relative;
+        left: 15px;
+        color: blue;
+        bottom: 5px;
+        top: 100px;
+        text-shadow: 0 0 10px orangered;
+        font-variant: small-caps;
+        height: 50px;
+        padding: 15px;
+        margin: 5px;
+    }
+
+    .menu>ul>li {
+        display: inline-block;
+    }
+
+    .menu>ul>li>a {
+        display: block;
+        text-decoration: none;
+        font-variant: small-caps;
+        font-size: larger;
+        color: white;
+        padding: 0 10px;
+        line-height: 40px;
+    }
+
+    .menu>ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        border-radius: 3px;
+        background-color: orangered;
+        text-align: center;
+    }
+
+    .menu>ul>li>a:hover {
+        color: yellow;
+    }
+
+    .menu ul ul {
+        position: absolute;
+        display: none;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        border-radius: 3px;
+        width: 200px;
+        background-color: white;
+        box-shadow: 0 0 3px gray;
+    }
+
+    .menu ul ul a {
+        display: block;
+        line-height: 30px;
+        color: orangered;
+        text-decoration: none;
+        font-variant: small-caps;
+        font-size: larger;
+        padding: 0 10px;
+    }
+
+    .menu>ul>li:hover>ul {
+        display: block;
+        z-index: 1;
+    }
+
+    .menu ul ul a:hover {
+        background-color: orangered;
+        color: white;
+    }
+
+    .company-info>h1 {
+        color: white;
+        border-bottom: 5px solid rgb(13, 0, 128);
+        width: 300px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .company-info>p {
+        color: springgreen;
+        padding: 0px;
+        margin: 0px;
+        position: absolute;
+    }
+
+    h3 {
+        text-align: center;
+        border-radius: initial;
+        color: red;
+    }
+
+    .chitiet {
+        padding: 0px;
+        margin: 2px;
+        list-style: none;
+    }
+
+    .chitiet a {
+        display: block;
+        color: blue;
+        font-variant: initial;
+        font-size: larger;
+        text-decoration: none;
+    }
+
+    .chitiet a:hover {
+        border-bottom: 1px white;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=421784885549356&autoLogAppEvents=1"
+        nonce="rT570Mxs"></script>
+    <div class="container">
+        <header>
+            <div class="company-info ">
+                <h1>FPT Polytechnic</h1>
+                <p>Thực học-Thực nghiệp</p>
+            </div>
+            <div class="top-right">
+                <a href="#">Đăng nhập</a>
+                <a href="#">Đăng kí</a>
+                <a href="#">Quên mật khẩu</a>
+            </div>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="trang_chu.html">Trang chủ</a></li>
+                <li><a href="gioi_thieu.html">Giới thiệu</a></li>
+                <li>
+                    <a href="#">Liên hệ</a>
+                    <ul>
+                        <li><a href="#">Mobile</a></li>
+                        <li><a href="#">Email</a></li>
+                    </ul>
+                </li>
+                <li><a href="gop_y.html">Góp ý</a></li>
+                <li><a href="hoi_dap.html">Hỏi đáp</a></li>
+            </ul>
+        </nav>
+        <h3>Chi tiết sản phẩm</h3>
+        <article>
+            <div class="prod">
+                <div class="name">France perfume</div>
+                <div class="detail-image">
+                    <img class="image" src="img/france.jpg">
+                </div>
+                <div class="price">$ 100 </div>
+                <div class="icon">
+                    <img src="img/heat.jpg">
+                    <img src="img/lathu1.jpg">
+                    <img src="img/giomay.jpg">
+                </div>
+                <img class="new-icon" src="img/new.gif">
+            </div>
+        </article>
+        <detail>
+            <ul class="chitiet">
+                <li><a href="#">Sản phẩm: Nước hoa Pháp</a></li> <br>
+                <li><a href="#">Xuất xứ: Pháp</a></li>
+
+            </ul>
+        </detail>
+        <aside>
+            <ul class="vmenu">
+                <li><a href="#">Máy tính xách tay</a></li>
+                <li><a href="#">Điện thoại di động</a> </li>
+                <li><a href="#">Máy quay phim</a></li>
+                <li><a href="#">Máy chụp ảnh</a></li>
+            </ul>
+        </aside>
+        <div class="fb-like" data-href="https://www.facebook.com/tham.je.5059/" data-width="" data-layout="standard"
+            data-action="like" data-size="small" data-share="true"></div>
+        <footer>FPT Polytechnic © 2017. All rights reserved.</footer>
+    </div>
+</body>
+
+</html>
